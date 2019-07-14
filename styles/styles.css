@@ -193,7 +193,7 @@ h1 {
   width: 475px; }
   #playagain-l:hover, #playagain-w:hover, #title-l:hover, #title-w:hover {
     background-color: white;
-    color: black;
+    color: cornflowerblue;
     animation: step-end;
     animation-play-state: paused; }
   #playagain-l:active, #playagain-l:focus, #playagain-w:active, #playagain-w:focus, #title-l:active, #title-l:focus, #title-w:active, #title-w:focus {
@@ -300,6 +300,11 @@ body {
 body > div {
   margin: 50px auto;
   text-align: center; }
+
+body {
+  background-image: url("../images/galaxy.gif");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /* ******************************
             Footer
