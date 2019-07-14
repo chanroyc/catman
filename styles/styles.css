@@ -292,7 +292,9 @@ h1 {
             Main
 ****************************** */
 body {
-  background-color: black;
+  background-image: url("../images/galaxy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: 'VT323', monospace;
   font-size: 2em; }
@@ -300,11 +302,6 @@ body {
 body > div {
   margin: 50px auto;
   text-align: center; }
-
-body {
-  background-image: url("../images/galaxy.gif");
-  background-repeat: no-repeat;
-  background-size: cover; }
 
 /* ******************************
             Footer
