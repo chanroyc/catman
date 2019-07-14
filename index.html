@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catman</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="bar">
+        <h1 id="points">score: 0</h1>
+        <h1 id="high-score">high score: 0</h1>
+        <h1 id="lives">lives: </h1>
+    </div>
+
+    <div class="ready">
+        <h1>CATMAN</h1>
+        <h2>Attack of the Strange Green Thing!</h2>
+        <button id="rdy">READY!</button>
+        <p>USE DIRECTIONAL KEYS TO MOVE</p>
+        <p>PRESS 'P' TO PAUSE THE GAME</p>
+        <p>PRESS 'ESC' TO OPEN THE MENU </p>
+    </div>
+
+    <div class="pause">
+        <h1>PAUSED!</h1>
+    </div>
+
+    <div class="menu">
+        <button id="resume">RESUME</button>
+        <button id="restart">RESTART</button>
+        <button id="title">RETURN TO TITLE</button>
+    </div>
+
+    <div class="lose">
+        <h1>The Strange Green Thing got you :(</h1>
+        <h1 id="your-score-l">Your Score: </h1>
+        <h1 id="high-score-l">High Score: </h1>
+        <img src="images/cat-lose.gif" alt="Cat Scared by Cucumber">
+        <div class="gameOverMenu">
+            <button id="playagain-l">PLAY AGAIN!</button>
+            <button id="title-l">RETURN TO TITLE</button>
+        </div>
+    </div>
+
+    <div class="win">
+        <h1>FOOD COMA ... GIVE ME MORE TREATS LATER :)</h1>
+        <h1 id="your-score-w">Your Score: </h1>
+        <h1 id="high-score-w">High Score: </h1>
+        <img src="images/cat-win.jpg" alt="Cat Sleeping">
+        <div class="gameOverMenu">
+            <button id="playagain-w">PLAY AGAIN!</button>
+            <button id="title-w">RETURN TO TITLE</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; Roy Chan 2019. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts/game.js"></script>
+</body>
+</html>

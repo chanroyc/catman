@@ -1,0 +1,315 @@
+/* ******************************
+    Images - Max-Width Reset
+****************************** */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* ******************************
+        Box Sizing Reset
+****************************** */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* ******************************
+            Animations
+****************************** */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes moveleft {
+  from {
+    right: 0px; }
+  to {
+    right: 30px; } }
+@keyframes moveright {
+  from {
+    left: 0px; }
+  to {
+    left: 30px; } }
+@keyframes movedown {
+  from {
+    top: 0px; }
+  to {
+    top: 30px; } }
+@keyframes moveup {
+  from {
+    bottom: 0px; }
+  to {
+    bottom: 30px; } }
+@keyframes readyButton {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.33; }
+  100% {
+    opacity: 1; } }
+/* ******************************
+            Map
+****************************** */
+.tile {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top; }
+
+.wall {
+  background-color: cornflowerblue;
+  border: 1px solid black; }
+
+.coin {
+  background-image: url("../images/shrimp.png");
+  background-size: cover;
+  border-radius: 50%;
+  transform: scale(0.3); }
+
+/* ******************************
+            Game Bar
+****************************** */
+.bar {
+  display: flex;
+  display: none;
+  margin: 0 auto;
+  width: 75%; }
+
+#lives {
+  display: flex;
+  justify-content: center; }
+  #lives .life {
+    background-image: url("../images/catmanOpen-right.png");
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    align-self: center; }
+
+h1 {
+  color: white;
+  flex: 1;
+  margin-bottom: 0; }
+
+/* ******************************
+            Catman
+****************************** */
+.catman {
+  background-image: url("../images/catman-right.gif");
+  background-size: cover;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards; }
+
+.left {
+  background-image: url("../images/catman-left.gif");
+  background-size: cover;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards; }
+
+.up {
+  background-image: url("../images/catman-up.gif");
+  background-size: cover;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards; }
+
+.down {
+  background-image: url("../images/catman-down.gif");
+  background-size: cover;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards; }
+
+.loader {
+  z-index: 1000000;
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 15px;
+  height: 120px;
+  animation: spin 2s linear infinite; }
+
+/* ******************************
+            Mouse
+****************************** */
+.mouse {
+  background-image: url("../images/mouse.png");
+  background-size: cover;
+  animation-duration: 0.315s;
+  animation-fill-mode: forwards;
+  z-index: 999; }
+
+/* ******************************
+            Win
+****************************** */
+.win {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%); }
+  .win h1:first-child {
+    color: orange; }
+  .win img {
+    display: block;
+    margin: 50px auto 25px; }
+
+/* ******************************
+            Lose
+****************************** */
+.lose {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%); }
+  .lose h1:first-child {
+    color: greenyellow; }
+  .lose img {
+    display: block;
+    margin: 50px auto 25px; }
+
+/* ******************************
+            Play Again
+****************************** */
+#playagain-l, #playagain-w, #title-l, #title-w {
+  font-family: 'VT323', monospace;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 2em;
+  border: 5px dotted white;
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin: 50px 25px 0;
+  cursor: pointer;
+  animation-name: readyButton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  width: 475px; }
+  #playagain-l:hover, #playagain-w:hover, #title-l:hover, #title-w:hover {
+    background-color: white;
+    color: black;
+    animation: step-end;
+    animation-play-state: paused; }
+  #playagain-l:active, #playagain-l:focus, #playagain-w:active, #playagain-w:focus, #title-l:active, #title-l:focus, #title-w:active, #title-w:focus {
+    outline: 0; }
+
+/* ******************************
+        Game Over Menu
+****************************** */
+.gameOverMenu {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+
+/* ******************************
+            Ready
+****************************** */
+.ready {
+  position: absolute;
+  top: 42.75%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .ready h1 {
+    font-size: 5em;
+    margin: 0; }
+  .ready h2 {
+    color: greenyellow;
+    margin: 0 0 70px; }
+  .ready p {
+    color: white; }
+  .ready #rdy {
+    font-family: 'VT323', monospace;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 2em;
+    border: 5px dotted white;
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin: 0 0 50px;
+    cursor: pointer;
+    animation-name: readyButton;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; }
+    .ready #rdy:hover {
+      color: cornflowerblue;
+      background-color: white;
+      animation: step-end;
+      animation-play-state: paused; }
+    .ready #rdy:active, .ready #rdy:focus {
+      outline: 0; }
+
+/* ******************************
+            Pause
+****************************** */
+.pause {
+  position: absolute;
+  top: 45%;
+  left: 50.2%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999; }
+
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100%; }
+  .menu #resume, .menu #title, .menu #restart {
+    align-self: center;
+    font-family: 'VT323', monospace;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 2em;
+    border: 5px dotted white;
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin: 0 0 50px;
+    cursor: pointer;
+    width: 30%; }
+    .menu #resume:hover, .menu #title:hover, .menu #restart:hover {
+      color: cornflowerblue;
+      background-color: white; }
+    .menu #resume:active, .menu #resume:focus, .menu #title:active, .menu #title:focus, .menu #restart:active, .menu #restart:focus {
+      outline: 0; }
+
+/* ******************************
+            Main
+****************************** */
+body {
+  background-color: black;
+  margin: 0;
+  font-family: 'VT323', monospace;
+  font-size: 2em; }
+
+body > div {
+  margin: 50px auto;
+  text-align: center; }
+
+/* ******************************
+            Footer
+****************************** */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  footer p {
+    color: white;
+    font-size: 0.85em; }
+
+/*# sourceMappingURL=styles.css.map */

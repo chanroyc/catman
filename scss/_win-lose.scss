@@ -1,0 +1,82 @@
+/* ******************************
+            Win
+****************************** */
+
+.win {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    h1:first-child{
+        color: orange;
+    }
+
+    img {
+        display: block;
+        margin: 50px auto 25px;
+    }
+}
+
+/* ******************************
+            Lose
+****************************** */
+
+.lose {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    h1:first-child{
+        color: greenyellow;
+    }
+
+    img {
+        display: block;
+        margin: 50px auto 25px;
+    }
+}
+
+/* ******************************
+            Play Again
+****************************** */
+    #playagain-l, #playagain-w, #title-l, #title-w {
+        font-family: 'VT323', monospace;
+        border: none;
+        background-color: rgba(black, 0);
+        color: white;
+        font-size: 2em;
+        border: 5px dotted white;
+        border-radius: 10px;
+        padding: 20px 40px;
+        margin: 50px 25px 0;
+        cursor: pointer;
+        animation-name: readyButton;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        width: 475px;
+        
+        &:hover {
+            background-color: white;
+            color: black;
+            animation: step-end;
+            animation-play-state: paused;
+        }
+
+        &:active, &:focus {
+            outline: 0;
+        }
+    }
+
+/* ******************************
+        Game Over Menu
+****************************** */
+
+.gameOverMenu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}

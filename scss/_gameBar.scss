@@ -1,0 +1,29 @@
+/* ******************************
+            Game Bar
+****************************** */
+
+.bar {
+    display: flex;
+    display: none;
+    margin: 0 auto;
+    width: 75%;
+}
+
+#lives {
+    display: flex;
+    justify-content: center;
+
+    .life {
+    background-image: url('../images/catmanOpen-right.png');
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    align-self: center;
+    }
+}
+
+h1 {
+    color: white;
+    flex: 1;
+    margin-bottom: 0;
+}

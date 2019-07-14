@@ -1,0 +1,51 @@
+@import 'resets';
+@import 'animations';
+
+@import 'mapComponents';
+@import 'gameBar';
+@import 'catman';
+@import 'mouse';
+
+@import 'win-lose';
+@import 'ready';
+@import 'menu';
+
+/* ******************************
+            Main
+****************************** */
+
+body {
+    background-color: black;
+    margin: 0;
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+}
+
+body > div {
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* ******************************
+            Footer
+****************************** */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    p {
+        color: white;
+        font-size: 0.85em;
+    }
+}
+
+
+
+
+
+
+
+
+

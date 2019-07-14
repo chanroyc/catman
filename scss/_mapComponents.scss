@@ -1,0 +1,24 @@
+/* ******************************
+            Map
+****************************** */
+
+.tile {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.wall {
+    background-color: cornflowerblue;
+    border: 1px solid black;
+}
+
+.coin {
+    background-image: url('../images/shrimp.png');
+    background-size: cover;
+    border-radius: 50%;
+    transform: scale(0.3);
+
+}

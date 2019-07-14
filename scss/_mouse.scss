@@ -1,0 +1,11 @@
+/* ******************************
+            Mouse
+****************************** */
+
+.mouse {
+    background-image: url('../images/mouse.png');
+    background-size: cover;
+    animation-duration: 0.315s;
+    animation-fill-mode: forwards;
+    z-index: 999;
+}

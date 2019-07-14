@@ -1,0 +1,42 @@
+/* ******************************
+            Animations
+****************************** */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveleft {
+    from {right: 0px;}
+    to {right: 30px;}
+}
+
+@keyframes moveright {
+    from {left: 0px;}
+    to {left: 30px;}
+}
+
+@keyframes movedown {
+    from {top: 0px;}
+    to {top: 30px;}
+}
+
+@keyframes moveup {
+    from {bottom: 0px;}
+    to {bottom: 30px;}
+}
+
+@keyframes readyButton {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.33;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
