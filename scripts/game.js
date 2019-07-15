@@ -364,10 +364,12 @@ function setupKeyboardControls() {
                 pause();
                 $('.pause').hide();
                 $('.menu').css('display', 'flex');
+                catsOnMars.volume = 0.1;
                 menuOpen = true;
             }else if (menuOpen === true && play === false && firedReturn === false){
                 pause();
                 $('.menu').hide();
+                catsOnMars.volume = 0.5;
                 menuOpen = false;
             }
         }else if(e.keyCode === 82 && play === false && firedReturn === false){
@@ -541,6 +543,7 @@ function mouseMoveRight(){
 
 function eat(){
     if (mouse.x === catman.x && mouse.y === catman.y){
+        eatSound.play();
         mousePrevTile = 0;
         catman.x = 13;
         catman.y = 17;
@@ -644,10 +647,12 @@ function pause(){
         firedLeft = false;
         firedRight = false;
         firedUp = false;
+        catsOnMars.volume = 0.1;
         $('.pause').show();
     }else if(play === false){
         GameMovement();
         play = true;
+        catsOnMars.volume = 0.5;
         $('.pause').hide();
     }
 }
@@ -732,6 +737,7 @@ function reset() {
 }
 
 $('#rdy').click(function(){
+    buttonClick.play();
     magicFly.pause();
     magicFly.currentTime = 0;
     catsOnMars.play();
@@ -749,6 +755,7 @@ $('#rdy').click(function(){
 })
 
 $('#playagain-l').click(function(){
+    buttonClick.play();
     $('.lose').fadeOut();
     catsOnMars.play();
     setTimeout(function(){
@@ -758,6 +765,7 @@ $('#playagain-l').click(function(){
 })
 
 $('#playagain-w').click(function(){
+    buttonClick.play();
     $('.win').fadeOut();
     catsOnMars.play();
     setTimeout(function(){
@@ -767,19 +775,24 @@ $('#playagain-w').click(function(){
 })
 
 $('#resume').click(function(){
+    buttonClick.play();
     pause();
     $('.menu').hide();
+    catsOnMars.volume = 0.5;
     menuOpen = false;
 })
 
 $('#restart').click(function(){
+    buttonClick.play();
     pause();
     $('.menu').hide();
     menuOpen = false;
+    catsOnMars.volume = 0.5;
     reset();
 })
 
 $('#title').click(function(){
+    buttonClick.play();
     catsOnMars.pause();
     catsOnMars.currentTime = 0;
     magicFly.play();
@@ -804,6 +817,7 @@ $('#title').click(function(){
 })
 
 $('#title-l').click(function(){
+    buttonClick.play();
     checkMeowt.pause();
     checkMeowt.currentTime = 0;
     magicFly.play();
@@ -825,6 +839,7 @@ $('#title-l').click(function(){
 })
 
 $('#title-w').click(function(){
+    buttonClick.play();
     smileyCat.pause();
     smileyCat.currentTime = 0;
     magicFly.play();
@@ -846,15 +861,18 @@ $('#title-w').click(function(){
 })
 
 let checkMeowt = new Audio('audio/check-meowt.mp3');
-checkMeowt.volume = 0.3;
+checkMeowt.volume = 0.5;
 
 let catsOnMars = new Audio('audio/cats-on-mars.mp3');
-catsOnMars.volume = 0.3;
+catsOnMars.volume = 0.5;
 
 let magicFly = new Audio('audio/magic-fly.mp3');
-magicFly.volume = 0.3;
+magicFly.volume = 0.5;
 
 let smileyCat = new Audio('audio/smiley-cat.mp3');
-smileyCat.volume = 0.3;
+smileyCat.volume = 0.5;
+
+let buttonClick = new Audio('audio/button-click.mp3');
+let eatSound = new Audio('audio/meow.mp3');
 
 magicFly.play();
